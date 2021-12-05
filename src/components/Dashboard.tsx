@@ -1,38 +1,37 @@
+import React,{useState} from "react"
+// import {
+//   Routes,
+//   Route,
+//   useLocation
+// } from 'react-router-dom';
+import Header from "./Header"
+import SiderBar from "./SiderBar"
+
 const Dashboard = () => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
   return (
     <>
-      <div className="mt-9 mx-3">
-        <div className="grid gap-4 grid-cols-1 md:grid-cols-3">
-          <div className=" bg-white p-2 rounded-lg">
-            <h2>Order Activity</h2>
-          </div>
-          <div className="bg-white p-2 rounded-md">
-            <h2>Empty</h2>
-            <div>hello</div>
-          </div>
-          <div className="grid grid-cols gap-4 ">
-            <div className="bg-white p-2 rounded-md">
-              <h2>87454RWF</h2>
-            </div>
-            <div className="bg-white p-2 rounded-md">
-              <h2>87454RWF</h2>
-            </div>
+      <div className="flex h-screen overflow-hidden">
+      {/* Sidebr  */}
+      <SiderBar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen}/>
+      {/* Header  */}
+      <div className="relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
+      <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+
+      <main>
+        <div className="bg-gray-200 flex h-screen w-screen mx-auto">
+          {/* Welcome */}
+          <div className="w-screen">
+            
           </div>
         </div>
-      
-      {/* seconde grid */}
-      <div className="grid gap-4 grid-cols-1 md:grid-cols-3 mt-5">
-        <div className="flex flex-col items-center bg-white p-4 rounded-lg">
-          <h2>Shortcuts</h2>
-        </div>
-        <div className="flex flex-col items-center bg-white p-4 rounded-lg">
-          <h2>Statistics</h2>
-        </div>
-        <div className="flex flex-col items-center bg-white p-4 rounded-lg">
-          <h2>Holidays</h2>
-        </div>
+      </main>
       </div>
-      </div>
+      {/* <Routes>
+        <Route path="/" ele ></Route>
+      </Routes> */}
+    </div>
     </>
   )
 }
