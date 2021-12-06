@@ -13,6 +13,9 @@ module.exports = {
         'light-blue': '#00adef',
         'header-blue':'#02a6ea'
 
+      },
+      backgroundImage: {
+        'sidebar-photo':"url('images/2754223.svg')",
       }
     },
   },

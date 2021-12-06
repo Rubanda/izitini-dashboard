@@ -10,13 +10,13 @@ interface Isidebar {
 }
 const Header = ({ sidebarOpen, setSidebarOpen }: Isidebar) => {
   return (
-    <div className="sticky top-0 text-white h-40 bg-header-blue z-30 ">
+    <div className="sticky top-0 text-white  bg-header-blue z-30 ">
             <div className="px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16 -mb-px">
 
 
       {/* Hamburger button */}
-      <div className="flex flex-grow items-center">
+      <div className="flex  items-center">
       <button
         className="text-gray-500 hover:text-gray-600 lg:hidden"
         aria-controls="sidebar"

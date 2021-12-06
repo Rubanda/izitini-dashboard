@@ -1,0 +1,21 @@
+[
+  {
+    "id": "Order Delivered",
+    "label": "Order Delivered",
+    "value": 535,
+    "color": "hsl(144, 98%, 46%)"
+  },
+  {
+    "id": "Order Pending",
+    "label": "Order Pending",
+    "value": 370,
+    "color": "hsl(206, 100%, 51%)"
+  },
+  {
+    "id": "Order Rejected",
+    "label": "Order Rejected",
+    "value": 15,
+    "color": "hsl(358, 100%, 51%)"
+  }
+
+]

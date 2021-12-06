@@ -1,39 +1,69 @@
-import React,{useState} from "react"
-// import {
-//   Routes,
-//   Route,
-//   useLocation
-// } from 'react-router-dom';
-import Header from "./Header"
-import SiderBar from "./SiderBar"
+import {  ChevronDownIcon, DotsHorizontalIcon } from '@heroicons/react/solid'
+import React, { useState } from 'react'
+import data from '../data/data.json'
+import dataLine from '../data/data.json'
+
+
+import {MyResponsivePie} from '../components/charts/orderCharts'
+import { MyResponsiveLine } from './charts/overallRevenue'
+import DashboardCard10 from './cards/topDeals'
 
 const Dashboard = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-
-  return (
-    <>
-      <div className="flex h-screen overflow-hidden">
-      {/* Sidebr  */}
-      <SiderBar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen}/>
-      {/* Header  */}
-      <div className="relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
-      <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
-
-      <main>
-        <div className="bg-gray-200 flex h-screen w-screen mx-auto">
-          {/* Welcome */}
-          <div className="w-screen">
-            
-          </div>
-        </div>
-      </main>
-      </div>
-      {/* <Routes>
-        <Route path="/" ele ></Route>
-      </Routes> */}
-    </div>
-    </>
-  )
+    return (
+        <>
+            <main>
+                <div className='px-4 sm:px-6  lg:px-8 py-8 w-full h-full max-w-9xl mx-auto bg-gray-200'>
+                    {/* Welcome */}
+                    <div className='grid gap-4 grid-cols-1 md:grid-cols-3 mt-5'>
+                        <div className='flex flex-col bg-white p-4 rounded-lg'>
+                            <div className='flex justify-around'>
+                              <h3 className="font-bold text-xl">Order Activity</h3>
+                              <div className="flex items-center">
+                                <h5>this week</h5>
+                                <ChevronDownIcon className="w-5 h-5" />
+                                </div>
+                              <DotsHorizontalIcon className="w-5 h-5 text-xl"/>
+                            </div>
+                            <div style={{height: '250px'}}>
+                              <MyResponsivePie data={data} />
+                            </div>
+                        </div>
+                        <div className='flex flex-col items-center bg-white p-4 rounded-lg'>
+                        </div>
+                        <div className='grid gap-4 grid-rows-2'>
+                            <div className='bg-white p-4 rounded-lg'>
+                                <h2 className="font-bold text-3xl px-4 text-light-blue">876,000 Rwf</h2>
+                                <h2 className="font-bold text-3xl px-4">Earned this Month</h2>
+                            </div>
+                            <div className='bg-white p-4 rounded-lg'>
+                                <h2 className="font-bold text-3xl px-4 text-light-blue">150</h2>
+                                <h2 className="font-bold text-3xl px-4">New Customer</h2>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div className='grid gap-4 grid-cols-1 md:grid-cols-2 mt-5'>
+                    <div className='flex flex-col bg-white p-4 rounded-lg'>
+                            <div className='flex justify-evenly'>
+                              <h3 className="font-bold text-xl">Overall Revenue</h3>
+                              <div className="flex items-center">
+                                <h5>This  month</h5>
+                                <ChevronDownIcon className="w-5 h-5" />
+                                </div>
+                            </div>
+                            <div style={{height: '250px'}}>
+                              <MyResponsiveLine data={dataLine} />
+                            </div>
+                        </div>
+                            <div className='flex flex-col p-4 bg-white rounded-lg'>
+                            <DashboardCard10 />
+                          
+                            </div>
+                        </div>
+                </div>
+            </main>
+        </>
+    )
 }
 
 export default Dashboard
