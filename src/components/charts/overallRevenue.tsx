@@ -1,121 +1,64 @@
-// import { ResponsiveLine } from '@nivo/line'
-import { ResponsivePie } from '@nivo/pie'
+import React, { PureComponent } from 'react';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
-// make sure parent container have a defined height when using
-// responsive component, otherwise height will be 0 and
-// no chart will be rendered.
-// website examples showcase many properties,
-// you'll often use just a few of them.
-export const MyResponsiveLine = ({ data }:any) => (
-    <ResponsivePie
-    data={data}
-    margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
-    innerRadius={0.5}
-    padAngle={0.7}
-    cornerRadius={3}
-    activeOuterRadiusOffset={8}
-    borderWidth={1}
-    borderColor={{ from: 'color', modifiers: [['darker', 0.2]] }}
-    arcLinkLabelsSkipAngle={10}
-    arcLinkLabelsTextColor='#333333'
-    arcLinkLabelsThickness={2}
-    arcLinkLabelsColor={{ from: 'color' }}
-    arcLabelsSkipAngle={10}
-    arcLabelsTextColor={{ from: 'color', modifiers: [['darker', 2]] }}
-    defs={[
-        {
-            id: 'dots',
-            type: 'patternDots',
-            background: 'inherit',
-            color: 'rgba(255, 255, 255, 0.3)',
-            size: 4,
-            padding: 1,
-            stagger: true,
-        },
-        {
-            id: 'lines',
-            type: 'patternLines',
-            background: 'inherit',
-            color: 'rgba(255, 255, 255, 0.3)',
-            rotation: -45,
-            lineWidth: 6,
-            spacing: 10,
-        },
-    ]}
-    fill={[
-        {
-            match: {
-                id: 'ruby',
-            },
-            id: 'dots',
-        },
-        {
-            match: {
-                id: 'c',
-            },
-            id: 'dots',
-        },
-        {
-            match: {
-                id: 'go',
-            },
-            id: 'dots',
-        },
-        {
-            match: {
-                id: 'python',
-            },
-            id: 'dots',
-        },
-        {
-            match: {
-                id: 'scala',
-            },
-            id: 'lines',
-        },
-        {
-            match: {
-                id: 'lisp',
-            },
-            id: 'lines',
-        },
-        {
-            match: {
-                id: 'elixir',
-            },
-            id: 'lines',
-        },
-        {
-            match: {
-                id: 'javascript',
-            },
-            id: 'lines',
-        },
-    ]}
-    legends={[
-        {
-            anchor: 'bottom',
-            direction: 'row',
-            justify: false,
-            translateX: 0,
-            translateY: 56,
-            itemsSpacing: 0,
-            itemWidth: 100,
-            itemHeight: 18,
-            itemTextColor: '#999',
-            itemDirection: 'left-to-right',
-            itemOpacity: 1,
-            symbolSize: 18,
-            symbolShape: 'circle',
-            effects: [
-                {
-                    on: 'hover',
-                    style: {
-                        itemTextColor: '#000',
-                    },
-                },
-            ],
-        },
-    ]}
-/>
-)
+const data = [
+  {
+    name: 'Page A',
+    uv: 4000,
+    pv: 2400,
+    amt: 2400,
+  },
+  {
+    name: 'Page B',
+    uv: 3000,
+    pv: 1398,
+    amt: 2210,
+  },
+  {
+    name: 'Page C',
+    uv: 2000,
+    pv: 800,
+    amt: 2290,
+  },
+  {
+    name: 'Page D',
+    uv: 2780,
+    pv: 3908,
+    amt: 2000,
+  },
+  {
+    name: 'Page E',
+    uv: 1890,
+    pv: 4800,
+    amt: 2181,
+  }
+];
+
+export default class Example extends React.Component {
+  static demoUrl = 'https://codesandbox.io/s/simple-line-chart-kec3v';
+
+  render() {
+    return (
+      <ResponsiveContainer width="100%" height={330} >
+        <LineChart
+          width={500}
+          height={300}
+          data={data}
+          margin={{
+            top: 5,
+            right: 30,
+            left: 20,
+            bottom: 5,
+          }}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="name" />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+          <Line type="monotone" dataKey="pv" stroke="#02a6ea" activeDot={{ r: 8 }} />
+        </LineChart>
+      </ResponsiveContainer>
+    );
+  }
+}

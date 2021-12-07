@@ -19,7 +19,7 @@ const Orders = () => {
                                 <SearchIcon className='w-5 h-5 text-gray-600' />
                             </span>
                             <input
-                                className='flex-grow outline-none bg-gray-200 text-gray-600 focus:text-blue-600'
+                                className='flex-grow outline-none bg-gray-100 text-gray-600 focus:text-blue-600'
                                 type='text'
                                 placeholder='Search for category, name, Company,etc'
                             />

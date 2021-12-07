@@ -1,12 +1,9 @@
 import {  ChevronDownIcon, DotsHorizontalIcon } from '@heroicons/react/solid'
 import React, { useState } from 'react'
 import data from '../data/data.json'
-import dataLine from '../data/data.json'
-
-
-import {MyResponsivePie} from '../components/charts/orderCharts'
-import { MyResponsiveLine } from './charts/overallRevenue'
+import Example from './charts/overallRevenue'
 import DashboardCard10 from './cards/topDeals'
+import { MyResponsiveRadialBar } from './charts/orderCharts'
 
 const Dashboard = () => {
     return (
@@ -24,12 +21,11 @@ const Dashboard = () => {
                                 </div>
                               <DotsHorizontalIcon className="w-5 h-5 text-xl"/>
                             </div>
-                            <div style={{height: '250px'}}>
-                              <MyResponsivePie data={data} />
+                            <div style={{height: 240}} >
+                              <MyResponsiveRadialBar data={data}  />
                             </div>
                         </div>
-                        <div className='flex flex-col items-center bg-white p-4 rounded-lg'>
-                        </div>
+
                         <div className='grid gap-4 grid-rows-2'>
                             <div className='bg-white p-4 rounded-lg'>
                                 <h2 className="font-bold text-3xl px-4 text-light-blue">876,000 Rwf</h2>
@@ -39,6 +35,8 @@ const Dashboard = () => {
                                 <h2 className="font-bold text-3xl px-4 text-light-blue">150</h2>
                                 <h2 className="font-bold text-3xl px-4">New Customer</h2>
                             </div>
+                        </div>
+                        <div className='flex flex-col items-center bg-white p-4 rounded-lg'>
                         </div>
                         
                     </div>
@@ -51,12 +49,12 @@ const Dashboard = () => {
                                 <ChevronDownIcon className="w-5 h-5" />
                                 </div>
                             </div>
-                            <div style={{height: '250px'}}>
-                              <MyResponsiveLine data={dataLine} />
+                            <div className="" >
+                              <Example  />
                             </div>
                         </div>
                             <div className='flex flex-col p-4 bg-white rounded-lg'>
-                            <DashboardCard10 />
+                           <DashboardCard10 />
                           
                             </div>
                         </div>
