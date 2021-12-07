@@ -25,7 +25,7 @@ const Header = ({ isClosed, setIsClosed, isStatic }: IHeader) => {
                                 title='open sidebar'
                                 aria-label='Open Sidebar'
                                 aria-hidden={isClosed}
-                                onClick={() => setIsClosed(!isClosed)}
+                                onClick={() => setIsClosed(false)}
                             >
                                 <span className='sr-only'>Open sidebar</span>
                                 <MenuIcon className='w-6 h-6 text-white' />

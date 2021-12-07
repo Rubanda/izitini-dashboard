@@ -21,15 +21,16 @@ const SideBar = ({ isClosed, setIsClosed, isStatic }: Isidebar) => {
     const { pathname } = location
 
     return (
-        <div className='bg-gradient-to-t from-dark-blue via-middle-blue to-light-blue p-4 space-y-8 bg-blue-800 w-64 text-gray-200 min-h-screen'>
+        <div >
             <Transition
-                show={isStatic || !isClosed}
+                show={isStatic || isClosed}
                 enter='transition-all duration-500'
                 enterFrom='-ml-64'
                 enterTo='ml-0'
                 leave='transition-all duration-500'
                 leaveTo='-ml-64'
             >
+                <div className={`bg-gradient-to-t from-dark-blue via-middle-blue to-light-blue p-4 space-y-8 bg-blue-800 w-64 text-gray-200 min-h-screen ${isStatic ? '' :'fixed'}`}>
                 <div className='flex justify-between text-white  border-b'>
                     {/* Logo */}
                     <Link to='/'>
@@ -49,7 +50,7 @@ const SideBar = ({ isClosed, setIsClosed, isStatic }: Isidebar) => {
                             className='lg:hidden text-gray-500 hover:text-gray-400'
                             title='Close Sidebar'
                             aria-label='Close menu'
-                            onClick={() => setIsClosed(false)}
+                            onClick={() => setIsClosed(true)}
                         >
                             <span className='sr-only'>Close sidebar</span>
                             <svg
@@ -207,40 +208,10 @@ const SideBar = ({ isClosed, setIsClosed, isStatic }: Isidebar) => {
                     </ul>
                     <div>Logout</div>
                 </div>
+                </div>
             </Transition>
         </div>
     )
 }
 
 export default SideBar
-
-// {/* sidebar backdrop (mobile) */}
-// {/* <div
-//     className={`fixed inset-0 bg-gray-900  bg-opacity-30 z-40 lg:hidden lg:z-auto transition-opacity duration-200 ${
-//         isClosed
-//             ? 'opacity-100'
-//             : 'opacity-0 pointer-events-none'
-//     }`}
-//     aria-hidden='true'
-// ></div> */}
-// {/* Sidebar */}
-
-// {
-//     /* <div className='flex justify-between mb-10 pr-3 sm:px-2'> */
-// }
-// {
-//     /* Close button */
-// }
-// {
-//     /* <button
-//                         ref={trigger}
-//                         className='lg:hidden text-gray-800 hover:text-gray-400'
-//                         onClick={() => setSidebarOpen(!sidebarOpen)}
-//                         aria-controls='sidebar'
-//                         aria-expanded={sidebarOpen}
-//                     >
-//                         <span className='sr-only'>Close sidebar</span>
-//                         <ArrowLeftIcon className='w-5 h-5' />
-//                     </button>
-//                 </div> */
-// }

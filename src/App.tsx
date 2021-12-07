@@ -12,7 +12,7 @@ import Coupons from './components/Coupons'
 import { useMediaQuery } from 'react-responsive'
 
 function App() {
-    const [sidebarOpen, setSidebarOpen] = useState(false)
+    const [isClosed, setIsClosed] = useState(false)
 
     const isStatic = useMediaQuery({
         query: '(min-width: 640px)'
@@ -21,18 +21,18 @@ function App() {
     return (
         <div className='flex h-screen overflow-hidden'>
             {/* Sidebr  */}
-            {!sidebarOpen && (
+            {!isClosed && (
                 <SiderBar
-                    sidebarOpen={sidebarOpen}
-                    setSidebarOpen={setSidebarOpen}
+                    isClosed={isClosed}
+                    setIsClosed={setIsClosed}
                     isStatic={isStatic}
                 />
             )}
             {/* Header  */}
             <div className='relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden'>
                 <Header
-                    sidebarOpen={sidebarOpen}
-                    setSidebarOpen={setSidebarOpen}
+                    isClosed={isClosed}
+                    setIsClosed={setIsClosed}
                     isStatic={isStatic}
                 />
                 <Routes>
