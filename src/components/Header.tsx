@@ -5,26 +5,27 @@ import {
     MenuIcon,
 } from '@heroicons/react/outline'
 
-
 interface IHeader {
-    sidebarOpen: boolean
-    setSidebarOpen: React.Dispatch<React.SetStateAction<boolean>>
+    isClosed: boolean
+    setIsClosed: React.Dispatch<React.SetStateAction<boolean>>
     isStatic: boolean
 }
 
-const Header = ({ sidebarOpen, setSidebarOpen,isStatic }: IHeader) => {
-
+const Header = ({ isClosed, setIsClosed, isStatic }: IHeader) => {
     return (
         <div className='sticky top-0 text-white  bg-header-blue z-30 '>
             <div className='px-4 sm:px-6 lg:px-8'>
                 <div className='flex items-center justify-between h-16 -mb-px'>
                     {/* Hamburger button */}
                     <div className='flex  items-center'>
-                        {(sidebarOpen) && (
+                        {!isStatic && (
                             <button
+                                tabIndex={1}
                                 className='text-gray-500 hover:text-gray-600 lg:hidden'
                                 title='open sidebar'
-                                onClick={() => setSidebarOpen(!sidebarOpen)}
+                                aria-label='Open Sidebar'
+                                aria-hidden={isClosed}
+                                onClick={() => setIsClosed(!isClosed)}
                             >
                                 <span className='sr-only'>Open sidebar</span>
                                 <MenuIcon className='w-6 h-6 text-white' />

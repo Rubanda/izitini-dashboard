@@ -15,7 +15,7 @@ function App() {
     const [sidebarOpen, setSidebarOpen] = useState(false)
 
     const isStatic = useMediaQuery({
-        query: `(min-width:640px)`,
+        query: '(min-width: 640px)'
       })
 
     return (
