@@ -23,14 +23,14 @@ const SideBar = ({ isClosed, setIsClosed, isStatic }: Isidebar) => {
     return (
         <div >
             <Transition
-                show={isStatic || isClosed}
+                show={isStatic || !isClosed}
                 enter='transition-all duration-500'
                 enterFrom='-ml-64'
                 enterTo='ml-0'
                 leave='transition-all duration-500'
                 leaveTo='-ml-64'
             >
-                <div className={`bg-gradient-to-t from-dark-blue via-middle-blue to-light-blue p-4 space-y-8 bg-blue-800 w-64 text-gray-200 min-h-screen ${isStatic ? '' :'fixed'}`}>
+                <div className={`bg-gradient-to-t from-dark-blue via-middle-blue to-light-blue p-4 space-y-8 w-64 text-gray-200 min-h-screen ${isStatic ? '' :'fixed'}`}>
                 <div className='flex justify-between text-white  border-b'>
                     {/* Logo */}
                     <Link to='/'>
@@ -42,8 +42,6 @@ const SideBar = ({ isClosed, setIsClosed, isStatic }: Isidebar) => {
                             alt='logo'
                         />
                     </Link>
-                    {/* Links */}
-
                     {!isStatic && (
                         <button
                             key='Close Menu'

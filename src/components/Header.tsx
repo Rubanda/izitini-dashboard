@@ -13,8 +13,7 @@ interface IHeader {
 
 const Header = ({ isClosed, setIsClosed, isStatic }: IHeader) => {
     return (
-        <div className='sticky top-0 text-white  bg-header-blue z-30 '>
-            <div className='px-4 sm:px-6 lg:px-8'>
+        <div className='sticky top-0 text-white  bg-header-blue'>
                 <div className='flex items-center justify-between h-16 -mb-px'>
                     {/* Hamburger button */}
                     <div className='flex  items-center'>
@@ -27,8 +26,8 @@ const Header = ({ isClosed, setIsClosed, isStatic }: IHeader) => {
                                 aria-hidden={isClosed}
                                 onClick={() => setIsClosed(false)}
                             >
-                                <span className='sr-only'>Open sidebar</span>
-                                <MenuIcon className='w-6 h-6 text-white' />
+                                <span className='sr-only' >Open sidebar</span>
+                                <MenuIcon className='w-6 h-6 text-white' aria-hidden={isClosed} />
                             </button>
                         )}
                         <h2 className='font-bold font-lg mx-2  text-2xl'>
@@ -60,7 +59,6 @@ const Header = ({ isClosed, setIsClosed, isStatic }: IHeader) => {
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
     )
 }

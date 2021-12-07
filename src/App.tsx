@@ -21,13 +21,11 @@ function App() {
     return (
         <div className='flex h-screen overflow-hidden'>
             {/* Sidebr  */}
-            {!isClosed && (
                 <SiderBar
                     isClosed={isClosed}
                     setIsClosed={setIsClosed}
                     isStatic={isStatic}
                 />
-            )}
             {/* Header  */}
             <div className='relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden'>
                 <Header
