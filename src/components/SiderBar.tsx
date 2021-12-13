@@ -204,7 +204,7 @@ const SideBar = ({ isClosed, setIsClosed, isStatic }: Isidebar) => {
                             </Link>
                         </li>
                     </ul>
-                    <div>Logout</div>
+                    <div><Link to='/signin'><div><p>Logout</p></div></Link></div>
                 </div>
                 </div>
             </Transition>
