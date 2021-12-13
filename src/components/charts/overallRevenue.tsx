@@ -35,7 +35,6 @@ const data = [
 ];
 
 export default class Example extends React.Component {
-  static demoUrl = 'https://codesandbox.io/s/simple-line-chart-kec3v';
 
   render() {
     return (
