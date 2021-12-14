@@ -37,8 +37,8 @@ function App() {
                     isStatic={isStatic}
                 />
                 <Routes>
+                    <Route path='/signup' element={<CustomerSignUp />} />       
                     <Route path='/signin' element={<SignInPage/>}/>
-                    <Route path='/signup' element={<CustomerSignUp />} />
                     <Route path='/' element={<Dashboard />} />
                     <Route path='/stores' element={<Store />} />
                     <Route path='/products' element={<Products />} />
