@@ -220,21 +220,19 @@ const SideBar = ({ isClosed, setIsClosed, isStatic }: Isidebar) => {
                     </div>
                     <div
                         className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${
-                            pathname.includes('logout') && 'bg-gray-800'
+                            pathname.includes('signin') && 'bg-gray-800'
                         }`}
                     >
                         <Link
-                            to='/logout'
+                            to='/signin'
                             className={`block text-gray-200 hover:text-white truncate transition duration-150 ${
-                                pathname.includes('logout') &&
+                                pathname.includes('signin') &&
                                 'hover:text-gray-400'
                             }`}
                         >
                             <div className='flex items-center space-x-2'>
-                                <Link to="/siginin">
                                 <LogoutIcon className='w-5 h-5' />
                                 <p>Logout</p>
-                                </Link>
                             
                             </div>
                         </Link>
