@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const CustomerSignUp = () => {
   return (
     <div>
-      <section className="min-h-screen bg-gray-50">
+      <section className="min-h-screen bg-white">
 
         <div className="w-full lg:w-5/12 px-4 mx-auto pt-6">
         <div>
@@ -17,14 +17,14 @@ const CustomerSignUp = () => {
               />
             </h1>
           </div>
-          <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-200 border-0">
+          <div className="relative flex flex-col min-w-0 break-words w-full mb-6  rounded-lg bg-white border border-black">
             <div className="rounded-t mb-0 px-6 py-6">
               <div className="text-center mb-3">
                 <h6 className="text-gray-500 text-sm font-bold">
                   Sign in with
                 </h6>
               </div>
-              <div className="btn-wrapper text-center">
+              <div className=" text-center">
                 <button
                   className="bg-white active:bg-gray-50 text-gray-700 px-4 py-2 rounded outline-none focus:outline-none mr-2 mb-1 uppercase shadow hover:shadow-md inline-flex items-center font-bold text-xs ease-linear transition-all duration-150"
                   type="button"
@@ -62,7 +62,7 @@ const CustomerSignUp = () => {
               <hr className="mt-6 border-b-1 border-blueGray-300" />
             </div>
             <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
-              <div className="text-gray-400 text-center mb-3 font-bold">
+              <div className="text-gray-700 text-center mb-3 font-bold">
                 <small>Or sign in with credentials</small>
               </div>
               <form>
@@ -75,7 +75,7 @@ const CustomerSignUp = () => {
                   </label>
                   <input
                     type="email"
-                    className="border-0 px-3 py-3 placeholder-gray-300 text-gray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                    className="border border-gray-700 px-3 py-3 placeholder-gray-500 text-gray-600 bg-gray-100 rounded text-sm  focus:outline-none  w-full ease-linear transition-all duration-150"
                     placeholder="Full Names"
                   />
                 </div>
@@ -87,8 +87,8 @@ const CustomerSignUp = () => {
                     Tel
                   </label>
                   <input
-                    type="email"
-                    className="border-0 px-3 py-3 placeholder-gray-300 text-gray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                    type="number"
+                    className="border border-gray-700 px-3 py-3 placeholder-gray-500 text-gray-600 bg-gray-100 rounded text-sm  focus:outline-none  w-full ease-linear transition-all duration-150"
                     placeholder="Tel"
                   />
                 </div>
@@ -101,7 +101,7 @@ const CustomerSignUp = () => {
                   </label>
                   <input
                     type="email"
-                    className="border-0 px-3 py-3 placeholder-gray-300 text-gray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                    className="border border-gray-700 px-3 py-3 placeholder-gray-500 text-gray-600 bg-gray-100 rounded text-sm  focus:outline-none  w-full ease-linear transition-all duration-150"
                     placeholder="Email"
                   />
                 </div>
@@ -114,7 +114,7 @@ const CustomerSignUp = () => {
                   </label>
                   <input
                     type="password"
-                    className="border-0 px-3 py-3 placeholder-gray-300 text-gray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                    className="border border-gray-700 px-3 py-3 placeholder-gray-500 text-gray-600 bg-gray-100 rounded text-sm  focus:outline-none  w-full ease-linear transition-all duration-150"
                     placeholder="Password"
                   />
                 </div>
@@ -132,13 +132,13 @@ const CustomerSignUp = () => {
                 </div>
                 <div className="text-center mt-6">
                   <button
-                    className="bg-light-blue text-white active:bg-gray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
+                    className="bg-light-blue text-white active:bg-gray-600 text-sm font-bold uppercase mb-4 px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
                     type="button"
                   >
-                    Sign In
+                    Sign Up
                   </button>
                 </div>
-                <hr className="text-gray-600"/>
+                <hr className="text-gray-600 mb-4"/>
                 <div className="text-right ">
                 <Link to="signin"><a href="#"className="text-light-blue hover:underline hover:text-middle-blue">Sign in</a> if already have an account by sign in,I agree to izitini's
                     Terms of use * Privacy Policy</Link>
