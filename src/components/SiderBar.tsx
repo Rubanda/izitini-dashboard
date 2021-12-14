@@ -231,8 +231,11 @@ const SideBar = ({ isClosed, setIsClosed, isStatic }: Isidebar) => {
                             }`}
                         >
                             <div className='flex items-center space-x-2'>
+                                <Link to="/siginin">
                                 <LogoutIcon className='w-5 h-5' />
                                 <p>Logout</p>
+                                </Link>
+                            
                             </div>
                         </Link>
                     </div>
