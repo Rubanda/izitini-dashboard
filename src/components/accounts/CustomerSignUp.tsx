@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const CustomerSignUp = () => {
   return (
     <div>
-      <section className="min-h-screen bg-white">
+      <section className="min-h-screen bg-gray-100">
 
         <div className="w-full lg:w-5/12 px-4 mx-auto pt-6">
         <div>
@@ -17,7 +17,7 @@ const CustomerSignUp = () => {
               />
             </h1>
           </div>
-          <div className="relative flex flex-col min-w-0 break-words w-full mb-6  rounded-lg bg-white border border-black">
+          <div className="relative flex flex-col min-w-0 break-words w-full mb-6  rounded-lg bg-white shadow hover:shadow-md ease-linear transition-all duration-150">
             <div className="rounded-t mb-0 px-6 py-6">
               <div className="text-center mb-3">
                 <h6 className="text-gray-500 text-sm font-bold">
@@ -59,10 +59,9 @@ const CustomerSignUp = () => {
                   LinkedIn
                 </button>
               </div>
-              <hr className="mt-6 border-b-1 border-blueGray-300" />
             </div>
             <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
-              <div className="text-gray-700 text-center mb-3 font-bold">
+              <div className="text-gray-700 border-bottom border-gray-600 text-center mb-3 font-bold">
                 <small>Or sign in with credentials</small>
               </div>
               <form>
@@ -75,7 +74,7 @@ const CustomerSignUp = () => {
                   </label>
                   <input
                     type="email"
-                    className="border border-gray-700 px-3 py-3 placeholder-gray-500 text-gray-600 bg-gray-100 rounded text-sm  focus:outline-none  w-full ease-linear transition-all duration-150"
+                    className="border border-gray-700 px-3 py-3 placeholder-gray-500 text-gray-600 bg-white rounded text-sm  focus:outline-none  w-full ease-linear transition-all duration-150"
                     placeholder="Full Names"
                   />
                 </div>
@@ -88,7 +87,7 @@ const CustomerSignUp = () => {
                   </label>
                   <input
                     type="number"
-                    className="border border-gray-700 px-3 py-3 placeholder-gray-500 text-gray-600 bg-gray-100 rounded text-sm  focus:outline-none  w-full ease-linear transition-all duration-150"
+                    className="border border-gray-700 px-3 py-3 placeholder-gray-500 text-gray-600 bg-white rounded text-sm  focus:outline-none  w-full ease-linear transition-all duration-150"
                     placeholder="Tel"
                   />
                 </div>
@@ -101,7 +100,7 @@ const CustomerSignUp = () => {
                   </label>
                   <input
                     type="email"
-                    className="border border-gray-700 px-3 py-3 placeholder-gray-500 text-gray-600 bg-gray-100 rounded text-sm  focus:outline-none  w-full ease-linear transition-all duration-150"
+                    className="border border-gray-700 px-3 py-3 placeholder-gray-500 text-gray-600 bg-white rounded text-sm  focus:outline-none  w-full ease-linear transition-all duration-150"
                     placeholder="Email"
                   />
                 </div>
@@ -114,7 +113,7 @@ const CustomerSignUp = () => {
                   </label>
                   <input
                     type="password"
-                    className="border border-gray-700 px-3 py-3 placeholder-gray-500 text-gray-600 bg-gray-100 rounded text-sm  focus:outline-none  w-full ease-linear transition-all duration-150"
+                    className="border border-gray-700 px-3 py-3 placeholder-gray-500 text-gray-600 bg-white rounded text-sm  focus:outline-none  w-full ease-linear transition-all duration-150"
                     placeholder="Password"
                   />
                 </div>

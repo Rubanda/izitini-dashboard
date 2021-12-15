@@ -35,7 +35,7 @@ const SideBar = ({ isClosed, setIsClosed, isStatic }: Isidebar) => {
                 leaveTo='-ml-64'
             >
                 <div
-                    className={`bg-gradient-to-t from-dark-blue via-middle-blue to-light-blue p-4 space-y-8 w-64 text-gray-200 min-h-screen ${
+                    className={`bg-gradient-to-t z-50 from-dark-blue via-middle-blue to-light-blue p-4 space-y-8 w-64 text-gray-200 min-h-screen ${
                         isStatic ? '' : 'fixed'
                     }`}
                 >
@@ -50,7 +50,7 @@ const SideBar = ({ isClosed, setIsClosed, isStatic }: Isidebar) => {
                                 alt='logo'
                             />
                         </Link>
-                        {/* {!isStatic && (
+                        {!isStatic && (
                         <button
                             key='Close Menu'
                             className='lg:hidden text-gray-500 hover:text-gray-400'
@@ -67,7 +67,7 @@ const SideBar = ({ isClosed, setIsClosed, isStatic }: Isidebar) => {
                                 <path d='M10.7 18.7l1.4-1.4L7.8 13H20v-2H7.8l4.3-4.3-1.4-1.4L4 12z' />
                             </svg>
                         </button>
-                    )} */}
+                    )}
                     </div>
 
                     <div>

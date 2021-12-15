@@ -23,7 +23,7 @@ const Dashboard = () => {
                                 </div>
                                 <DotsHorizontalIcon className='w-5 h-5 text-xl' />
                             </div>
-                            <div style={{ height: 240 }}>
+                            <div style={{ height: 240,zIndex:10 }}>
                                 <MyResponsiveRadialBar data={data} />
                             </div>
                         </div>
