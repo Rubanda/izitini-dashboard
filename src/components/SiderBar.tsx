@@ -26,7 +26,6 @@ const SideBar = ({ isClosed, setIsClosed, isStatic }: Isidebar) => {
     }
     return (
         <div>
-
             <Transition
                 show={isStatic || !isClosed}
                 enter='transition-all duration-200'
@@ -52,23 +51,23 @@ const SideBar = ({ isClosed, setIsClosed, isStatic }: Isidebar) => {
                             />
                         </Link>
                         {!isStatic && (
-                        <button
-                            key='Close Menu'
-                            className='lg:hidden text-gray-500 hover:text-gray-400'
-                            title='Close Sidebar'
-                            aria-label='Close menu'
-                            onClick={handleClick}
-                        >
-                            <span className='sr-only'>Close sidebar</span>
-                            <svg
-                                className='w-6 h-6 fill-current'
-                                viewBox='0 0 24 24'
-                                xmlns='http://www.w3.org/2000/svg'
+                            <button
+                                key='Close Menu'
+                                className='lg:hidden text-gray-500 hover:text-gray-400'
+                                title='Close Sidebar'
+                                aria-label='Close menu'
+                                onClick={handleClick}
                             >
-                                <path d='M10.7 18.7l1.4-1.4L7.8 13H20v-2H7.8l4.3-4.3-1.4-1.4L4 12z' />
-                            </svg>
-                        </button>
-                    )}
+                                <span className='sr-only'>Close sidebar</span>
+                                <svg
+                                    className='w-6 h-6 fill-current'
+                                    viewBox='0 0 24 24'
+                                    xmlns='http://www.w3.org/2000/svg'
+                                >
+                                    <path d='M10.7 18.7l1.4-1.4L7.8 13H20v-2H7.8l4.3-4.3-1.4-1.4L4 12z' />
+                                </svg>
+                            </button>
+                        )}
                     </div>
 
                     <div>
@@ -77,6 +76,7 @@ const SideBar = ({ isClosed, setIsClosed, isStatic }: Isidebar) => {
                                 className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 divided-y  ${
                                     pathname === '/' && 'bg-gray-800'
                                 }`}
+                                onClick={handleClick}
                             >
                                 <Link
                                     to='/'
@@ -97,6 +97,7 @@ const SideBar = ({ isClosed, setIsClosed, isStatic }: Isidebar) => {
                                 className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${
                                     pathname.includes('store') && 'bg-gray-800'
                                 }`}
+                                onClick={handleClick}
                             >
                                 <Link
                                     to='/stores'
@@ -118,6 +119,7 @@ const SideBar = ({ isClosed, setIsClosed, isStatic }: Isidebar) => {
                                     pathname.includes('products') &&
                                     'bg-gray-800'
                                 }`}
+                                onClick={handleClick}
                             >
                                 <Link
                                     to='/products'
@@ -138,6 +140,7 @@ const SideBar = ({ isClosed, setIsClosed, isStatic }: Isidebar) => {
                                 className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${
                                     pathname.includes('orders') && 'bg-gray-800'
                                 }`}
+                                onClick={handleClick}
                             >
                                 <Link
                                     to='/orders'
@@ -159,6 +162,7 @@ const SideBar = ({ isClosed, setIsClosed, isStatic }: Isidebar) => {
                                     pathname.includes('coupons') &&
                                     'bg-gray-800'
                                 }`}
+                                onClick={handleClick}
                             >
                                 <Link
                                     to='/coupons'
@@ -180,6 +184,7 @@ const SideBar = ({ isClosed, setIsClosed, isStatic }: Isidebar) => {
                                     pathname.includes('reports') &&
                                     'bg-gray-800'
                                 }`}
+                                onClick={handleClick}
                             >
                                 <Link
                                     to='/reports'
@@ -201,6 +206,7 @@ const SideBar = ({ isClosed, setIsClosed, isStatic }: Isidebar) => {
                                     pathname.includes('settings') &&
                                     'bg-gray-800'
                                 }`}
+                                onClick={handleClick}
                             >
                                 <Link
                                     to='/settings'
@@ -223,6 +229,7 @@ const SideBar = ({ isClosed, setIsClosed, isStatic }: Isidebar) => {
                         className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${
                             pathname.includes('signin') && 'bg-gray-800'
                         }`}
+                        onClick={handleClick}
                     >
                         <Link
                             to='/signin'
@@ -234,7 +241,6 @@ const SideBar = ({ isClosed, setIsClosed, isStatic }: Isidebar) => {
                             <div className='flex items-center space-x-2'>
                                 <LogoutIcon className='w-5 h-5' />
                                 <p>Logout</p>
-                            
                             </div>
                         </Link>
                     </div>
