@@ -22,20 +22,21 @@ const SideBar = ({ isClosed, setIsClosed, isStatic }: Isidebar) => {
     const { pathname } = location
 
     const handleClick = () => {
-        setIsClosed(!isClosed)
+        setIsClosed(true)
     }
     return (
         <div>
+
             <Transition
                 show={isStatic || !isClosed}
-                enter='transition-all duration-500'
+                enter='transition-all duration-200'
                 enterFrom='-ml-64'
                 enterTo='ml-0'
-                leave='transition-all duration-500'
+                leave='transition-all duration-200'
                 leaveTo='-ml-64'
             >
                 <div
-                    className={`bg-gradient-to-t z-50 from-dark-blue via-middle-blue to-light-blue p-4 space-y-8 w-64 text-gray-200 min-h-screen ${
+                    className={`bg-gradient-to-t z-20 from-dark-blue via-middle-blue to-light-blue p-4 space-y-8 w-64 text-gray-200 min-h-screen ${
                         isStatic ? '' : 'fixed'
                     }`}
                 >
