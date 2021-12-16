@@ -22,7 +22,7 @@ const Header = ({ isClosed, setIsClosed, isStatic }: IHeader) => {
                 {/* Hamburger button */}
                 <div className='flex  items-center'>
                     {!isStatic &&
-                        (isClosed ? (
+                        (
                             <button
                                 tabIndex={1}
                                 className='text-gray-500 hover:text-gray-600 lg:hidden'
@@ -34,27 +34,10 @@ const Header = ({ isClosed, setIsClosed, isStatic }: IHeader) => {
                                 <span className='sr-only'>Open sidebar</span>
                                 <MenuIcon
                                     className='w-6 h-6 text-white'
-                                    aria-hidden={isClosed}
+                                    aria-hidden={true}
                                 />
                             </button>
-                        ) : (
-                            <button
-                                key='Close Menu'
-                                className='lg:hidden text-gray-500 hover:text-gray-400'
-                                title='Close Sidebar'
-                                aria-label='Close menu'
-                                onClick={() => setIsClosed(true)}
-                            >
-                                <span className='sr-only'>Close sidebar</span>
-                                <svg
-                                    className='w-6 h-6 fill-current'
-                                    viewBox='0 0 24 24'
-                                    xmlns='http://www.w3.org/2000/svg'
-                                >
-                                    <path d='M10.7 18.7l1.4-1.4L7.8 13H20v-2H7.8l4.3-4.3-1.4-1.4L4 12z' />
-                                </svg>
-                            </button>
-                        ))}
+                        )}
                     <h2 className='font-bold font-lg mx-2  text-2xl'>
                         Dashboard
                     </h2>
