@@ -2,7 +2,7 @@ import ImageUpload from "./ImageUpload";
 
 const CreateProduct = () => {
   return (
-    <div className="px-4 sm:px-6  lg:px-8 py-8 w-full h-full  max-w-9xl mx-auto bg-gray-200">
+    <div className="px-4 sm:px-6  lg:px-8 py-8 w-full h-screen  max-w-9xl mx-auto bg-gray-200">
       <div className="font-bold text-3xl text-center">Create a Product</div>
       <form>
         <div className=" w-full mb-3">
@@ -59,7 +59,7 @@ const CreateProduct = () => {
         </div>
         <div>
           <h3>Pick color</h3>
-          <div className="">
+          <div className="relative">
             <select
               className="block appearance-none w-full bg-white border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               id="grid-state"
@@ -119,7 +119,7 @@ const CreateProduct = () => {
           />
         </div>
         <div>
-          <ImageUpload />
+          {/* <ImageUpload /> */}
         </div>
         <div className="text-center mt-6">
           <button

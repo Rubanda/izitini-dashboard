@@ -2,7 +2,7 @@ import {
     BellIcon,
     ChatIcon,
     ChevronDownIcon,
-    MenuIcon,
+    MenuAlt2Icon
 } from '@heroicons/react/outline'
 import { SearchIcon } from '@heroicons/react/solid'
 
@@ -32,7 +32,7 @@ const Header = ({ isClosed, setIsClosed, isStatic }: IHeader) => {
                                 onClick={() => setIsClosed(false)}
                             >
                                 <span className='sr-only'>Open sidebar</span>
-                                <MenuIcon
+                                <MenuAlt2Icon
                                     className='w-6 h-6 text-white'
                                     aria-hidden={true}
                                 />
@@ -43,7 +43,7 @@ const Header = ({ isClosed, setIsClosed, isStatic }: IHeader) => {
                     </h2>
                 </div>
                 <div className='flex items-center justify-evenly space-x-3 mx-4'>
-                        <div className=' container h-screen  justify-center items-center hidden md:flex'>
+                        <div className='justify-center items-center hidden md:flex'>
                             <div className='relative'>
                                 <input
                                     type='text'

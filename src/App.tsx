@@ -47,7 +47,7 @@ function App() {
                     leaveFrom='opacity-50'
                     leaveTo='opacity-0'
                 >
-                    <div className='fixed inset-0 bg-black opacity-60' />
+                    <div className='fixed inset-0 bg-black opacity-60 z-10' />
                 </Transition>
 
                 <Routes>
